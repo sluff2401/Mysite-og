@@ -90,21 +90,21 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-uk'
 
-'''
+
 DATE_INPUT_FORMATS = (
     '%Y-%m-%d',              # '2006-10-25'
     '%d/%m/%Y',              # '25/10/2006'
     '%d/%m/%y',              # '25/10/06'
 )
-'''
 
+'''
 DATE_INPUT_FORMATS = (
     '%d%m%y',              # '251006'
     '%d/%m/%y',              # '25/10/06'
     '%Y-%m-%d',              # '2006-10-25'
     '%d/%m/%Y',              # '25/10/2006'
 )
-
+'''
 
 DATE_FORMAT = "l jS F Y"     # is not having effect
 
