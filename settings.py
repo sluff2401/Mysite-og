@@ -24,8 +24,8 @@ SECRET_KEY = '@%hbn=!+ivle&5!6jcsexkh@m*_7^(pdl^t9#q-&1cs88$ew3-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ['.coffeepot.pythonanywhere.com',]
+TEMPLATE_DEBUG = True
+ALLOWED_HOSTS = ['.cliveogilvie.pythonanywhere.com',]
 
 
 # Application definition
