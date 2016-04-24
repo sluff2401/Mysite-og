@@ -87,9 +87,11 @@
 </head>
 <body>
     {% if user.is_authenticated %}
+      {% if unsubscribed %}
         <p class="top-menu"><small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
-     {% else %}
-        <p class="top-menu"><small>(<a href="{% url 'django.contrib.auth.views.login' %}">Log in</a>)</small></p>
+      {% endif %}
+    {% else %}
+       <p class="top-menu"><small>(<a href="{% url 'django.contrib.auth.views.login' %}">Log in</a>)</small></p>
     {% endif %}
     <h1>Harrow Coffee Pot</h1>
     <hr>
