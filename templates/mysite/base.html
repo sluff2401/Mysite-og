@@ -87,7 +87,7 @@
 </head>
 <body>
     {% if user.is_authenticated %}
-      {% if unsubscribed %}
+      {% if not unsubscribed %}
         <p class="top-menu"><small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
       {% endif %}
     {% else %}
