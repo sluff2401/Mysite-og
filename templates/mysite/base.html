@@ -10,7 +10,7 @@
       margin-top: 0;
       padding: 20px 20px 20px 40px;
       color: #000000;
-      background-color: #f3fff3;
+      background-color:{{activeperson.backgroundcolor}};
       font-size: xx-large;
       font-weight:bold;
       font-family: 'Arial';
@@ -20,7 +20,7 @@
 
     h2, h2:visited {
       color: #000000;
-      background-color:#F3FFF3;
+      background-color:{{activeperson.backgroundcolor}};
       font-size: x-large;
       font-weight:bold;
       padding-left:15px;
@@ -28,18 +28,25 @@
 
     h2 a, h2 a:visited {
       color: #000000;
-      background-color:#F3FFF3;
+      background-color:{{activeperson.backgroundcolor}};
       font-size: x-large;
       font-weight:bold;
       text-align:center;
     }
 
+{% comment %}
     h2.item , h2.item :visited {
       color: #0000c0;
     }
+{% endcomment %}
+
+    h2.item , h2.item :visited {
+      color: {{activeperson.detailcolor}};
+    }
+
 
     h2.attendees , h2.attendees :visited {
-      color: #00c000;
+      color: {{activeperson.attendeescolor}};
     }
 
     h2 span.label , h2 span.label :visited {
@@ -54,13 +61,13 @@
 
     hr {
       color: #000000;
-      background-color:#F3FFF3;
+      background-color:{{activeperson.backgroundcolor}};
       font-weight:bold;
     }
 
     em.author {
       color: #DF9000;
-      background-color:#F3FFF3;
+      background-color:{{activeperson.backgroundcolor}};
       font-style:normal;
       font-weight:bold;
     }
@@ -69,7 +76,7 @@
 
 
     body {
-      background-color:#F3FFF3;
+      background-color:{{activeperson.backgroundcolor}};
     }
 
     td {
@@ -86,12 +93,19 @@
   </style>
 </head>
 <body>
+    {% comment %}
     {% if user.is_authenticated %}
       {% if not unsubscribed %}
         <p class="top-menu"><small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
       {% endif %}
     {% else %}
+<<<<<<< HEAD
        <p class="top-menu"><small>(<a href="{% url 'django.contrib.auth.views.login' %}">Log in</a>)</small></p>
+=======
+    {% endcomment %}
+    {% if activeperson.username = 'default' %}
+        <p class="top-menu"><small><a href="{% url 'django.contrib.auth.views.login' %}">Log in</a></small></p>
+>>>>>>> a9c1831b03670b753439dee5bcb0af7f138261c2
     {% endif %}
     <h1>Harrow Coffee Pot</h1>
     <hr>
