@@ -99,19 +99,16 @@
         <p class="top-menu"><small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
       {% endif %}
     {% else %}
-<<<<<<< HEAD
-       <p class="top-menu"><small>(<a href="{% url 'django.contrib.auth.views.login' %}">Log in</a>)</small></p>
-=======
+      <p class="top-menu"><small>(<a href="{% url 'django.contrib.auth.views.login' %}">Log in</a>)</small></p>
     {% endcomment %}
     {% if activeperson.username = 'default' %}
         <p class="top-menu"><small><a href="{% url 'django.contrib.auth.views.login' %}">Log in</a></small></p>
->>>>>>> a9c1831b03670b753439dee5bcb0af7f138261c2
     {% endif %}
-    <h1>Harrow Coffee Pot</h1>
+    <h1>O'Grady Court Social Club</h1>
     <hr>
       {% block content %}
       {% endblock %}
 </body>
 </html>
-{#    <h1><a href="{% url 'events_app_b.views.event_list' %}">Harrow Coffee Pot</a></h1> #}
+{#    <h1><a href="{% url 'events_app_b.views.event_list' %}">O'Grady Court Social Club</a></h1> #}
  {#         <a href="{% url 'django.contrib.auth.views.login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>#}
